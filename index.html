@@ -56,12 +56,13 @@
   }
   .rooms h1 {
     padding: 20px 0px;
+    text-align: center;
   }
   .rooms__card--container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 50px 50px;
-    width: 70%;
+    width: 80%;
   }
   .rooms__card {
     background-color: black;
@@ -73,14 +74,25 @@
     transition: transform 0.3s ease-out 0s;
     width: 100%;
   }
+  .footer {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 </style>
 <body>
   <nav class="navbar">
     <img src="" alt="roomates logo">
     <ul>
+      <li>Buscar Cuarto</li>
+      ·
       <li>Perfil</li>
-      <li>Hola</li>
-      <li>Chao</li>
+      ·
+      <li>Salir</li>
     </ul>
   </nav>
   <div class="page">
@@ -112,5 +124,6 @@
       </div>
     </div>
   </div>
+  <footer class="footer">Soy un lindo footer</footer>
 </body>
 </html>
