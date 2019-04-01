@@ -69,14 +69,15 @@
     margin-bottom: 50px;
   }
   .rooms__card {
-    background-color: black;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
-    cursor: pointer;
-    border-radius: 20px;
+    background-color: #FFF;
+    margin: auto;
     height: 320px;
-    overflow: hidden;
-    transition: transform 0.3s ease-out 0s;
     width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    display: grid;
+    grid-template-rows: 40% 10% 40% 10%;
+    position: relative;
   }
   a {
     text-decoration: none;
@@ -104,6 +105,48 @@
   button:focus {
     outline: 0;
   }
+  .image {
+    background: url('./empty.jpg');
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+  }
+  .place {
+    font-size: xx-large;
+    margin-top: 5px;
+    margin-left: 15px;
+  }
+  .description {
+    font-size: small;
+    margin-top: 35px;
+    margin-left: 25px;
+  }
+  .price {
+    background-color: #E51B23;
+    color: #f8f5f6;
+    font-size: 20px;
+    width: 180px;
+    height: 35px;
+    position: absolute;
+    left: -30px;
+    bottom: 36px;
+  }
+  .price p {
+    text-align: center;
+    margin: 5px;
+  }
+  .more_information {
+    background-color: #E51B23;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    padding-right: 10px;
+  }
 </style>
 <body>
   <nav class="navbar">
@@ -122,7 +165,21 @@
       <h1>Cuartos</h1>
       <div class="rooms__card--container">
         <div class="rooms__card">
-           <button>See more</button>
+          <div class="rooms__card">
+            <div class="image"></div>
+            <div class="place">
+              <p>This is the place</p>
+            </div>
+            <div class="description">
+              <p>This is the description</p>
+              <div class="price">
+                <p>$999.999</p>
+              </div>
+            </div>
+            <div class="more_information">
+              <button>see more</button>
+            </div>
+          </div>
         </div>
         <div class="rooms__card"></div>
         <div class="rooms__card"></div>
