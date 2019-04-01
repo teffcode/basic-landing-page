@@ -4,9 +4,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <title>Login</title>
 </head>
+<style>
+  body {
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+  }
+  header {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  header img {
+    margin-left: 30px;
+    width: 120px;
+  }
+  header button {
+    margin-right: 30px;
+  }
+  button {
+    height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    border: 2px solid #E51B23;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  button:focus {
+    outline: 0;
+  }
+  .primary-button {
+    background-color: #E51B23;
+    color: white;
+  }
+  .secondary-button {
+    color: #E51B23;
+  }
+  h1 {
+    text-align: center;
+    color: #E51B23;
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0px;
+  }
+  input {
+    height: 20px;
+    width: 230px;
+    border: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    margin-top: 10px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  footer {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .submit {
+    width: 220px;
+    margin-top: 30px;
+  }
+</style>
 <body>
-  
+  <header>
+    <img src="./logo.png" alt="Logo UnRoommate">
+    <button class="secondary-button">Sign Up</button>
+  </header>
+  <h1>"A good rest is half the task."</h1>
+  <form>
+    Email: <input type="text" name="email">
+    <br>
+    Password: <input type="text" name="password">
+    <button class="primary-button submit">Sign up</button>
+  </form>
+  <footer>
+    · UNROOMATE · <br>
+    William Aguilar, Hugo Mazo, Santiago Montoya
+  </footer>
 </body>
 </html>
