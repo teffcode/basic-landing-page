@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <title>Profile</title>
+</head>
+<style>
+  body {
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+  }
+  .navbar {
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 1px 10px #999;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+  }
+  .navbar img {
+    padding-left: 30px;
+    width: 120px;
+  }
+  .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+  }
+  .navbar li {
+    display: inline-block;
+    padding: 0px 10px;
+    cursor: pointer;
+  }
+  footer {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color: #E51B23;
+  }
+  button {
+    height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    border: 2px solid #E51B23;
+    color: #E51B23;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  button:focus {
+    outline: 0;
+  }
+  .profile__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0px;
+  }
+  .profile__container img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #E51B23;
+    margin-bottom: 40px;
+  }
+  .profile__container--buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  h1, h2, h3 {
+    color:#E51B23;
+    text-align: center;
+  }
+  p {
+    text-align: center;    
+  }
+</style>
+<body>
+  <nav class="navbar">
+    <img src="./logo.png" alt="roomates logo">
+    <ul>
+      <li><a href="profile">Profile</a></li>
+      ·
+      <li><a href="rooms">Rooms</a></li>
+      ·
+      <li><a href="login">Sign out</a></li>
+    </ul>
+  </nav>
+  <div class="profile__container">
+    <h1>Profile</h1>
+    <img src="https://images.pexels.com/photos/678783/pexels-photo-678783.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="profile picture">
+    <p>Hola, soy Sofi. Me encanta pasear a mi perro y recogerle su popó.</p>
+    <button>Edit description</button>
+    <div class="profile__container--buttons">
+      <h3>Self-Description</h3>
+      <button>Create</button>
+      <h3>Contracts</h3>
+      <button>See</button>
+      <h3>Comments</h3>
+      <button>See</button>
+    </div>
+  </div>
+  <footer>
+    · UNROOMATE · <br>
+    William Aguilar, Hugo Mazo, Santiago Montoya
+  </footer>
+</body>
+</html>
