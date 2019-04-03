@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <title>Search</title>
+</head>
+<style>
+  body {
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+  }
+  .navbar {
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 1px 10px #999;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+  }
+  .navbar img {
+    padding-left: 30px;
+    width: 120px;
+  }
+  .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+  }
+  .navbar li {
+    display: inline-block;
+    padding: 0px 10px;
+    cursor: pointer;
+  }
+  footer {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color: #E51B23;
+  }
+  button {
+    height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    border: 2px solid #E51B23;
+    color: #E51B23;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  button:focus {
+    outline: 0;
+  }
+  .profile__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0px 0px 0px;
+  }
+  .profile__container img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #E51B23;
+    margin-bottom: 40px;
+  }
+  .profile__container--buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  h1, h2, h3 {
+    color:#E51B23;
+    text-align: center;
+  }
+  p {
+    text-align: center;    
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0px;
+  }
+  input {
+    height: 20px;
+    width: 230px;
+    border: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    margin-top: 10px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .primary-button {
+    background-color: #E51B23;
+    color: white;
+  }
+  .submit {
+    width: 220px;
+    margin-top: 30px;
+  }
+  .rooms__card--container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 50px 50px;
+    width: 80%;
+    margin-bottom: 50px;
+  }
+  .rooms__card {
+    background-color: #FFF;
+    margin: auto;
+    height: 320px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    display: grid;
+    grid-template-rows: 40% 10% 40% 10%;
+    position: relative;
+  }
+  .image {
+    background: url('./empty.jpg');
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+  }
+  .place {
+    font-size: xx-large;
+    margin-top: 5px;
+    margin-left: 15px;
+  }
+  .description {
+    font-size: small;
+    margin-top: 35px;
+    margin-left: 25px;
+  }
+  .price {
+    background-color: #E51B23;
+    color: #f8f5f6;
+    font-size: 20px;
+    width: 180px;
+    height: 35px;
+    position: absolute;
+    left: -30px;
+    bottom: 36px;
+  }
+  .price p {
+    text-align: center;
+    margin: 5px;
+  }
+  .more_information {
+    background-color: #E51B23;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    padding-right: 10px;
+  }
+  .rooms {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .rooms h1 {
+    padding: 20px 0px;
+    text-align: center;
+  }
+</style>
+<body>
+  <nav class="navbar">
+    <img src="./logo.png" alt="roomates logo">
+    <ul>
+      <li><a href="profile">Profile</a></li>
+      ·
+      <li><a href="rooms">Rooms</a></li>
+      ·
+      <li><a href="login">Sign out</a></li>
+    </ul>
+  </nav>
+  <div class="profile__container">
+    <h1>Search Rooms</h1>
+    <form>
+      ID: <input type="text" name="firstname">
+      <br>
+      Price: <input type="text" name="price">
+      <br>
+      Size: <input type="text" name="size">
+      <br>
+      Furniture: <input type="text" name="furniture">
+      <br>
+      Kitchen: <input type="text" name="kitchen">
+      <br>
+      Bathroom: <input type="text" name="bathroom">
+      <br>
+      Cleaning: <input type="text" name="cleaning">
+      <br>
+      Feeding: <input type="text" name="feeding">
+      <br>
+      Services: <input type="text" name="services">
+      <br>
+      <button class="primary-button submit">Search</button>
+    </form>
+  </div>
+  <div class="rooms">
+    <h1>Your Search</h1>
+    <div class="rooms__card--container">
+      <div class="rooms__card">
+        <div class="rooms__card">
+          <div class="image"></div>
+          <div class="place">
+            <p>This is the place</p>
+          </div>
+          <div class="description">
+            <p>This is the description</p>
+            <div class="price">
+              <p>$999.999</p>
+            </div>
+          </div>
+          <div class="more_information">
+            <button>See more</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    · UNROOMATE · <br>
+    William Aguilar, Hugo Mazo, Santiago Montoya
+  </footer>
+</body>
+</html>
